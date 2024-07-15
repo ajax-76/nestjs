@@ -15,7 +15,7 @@ import { TokenBucketService } from './app-services/tokenBucketRateLimitter';
         name: 'MICROSERVICE_ONE',
         transport: Transport.REDIS,
         options: {
-          host: 'localhost',
+          host:process.env.REDIS_HOST,
           port: 6379,
         }
       },
@@ -23,7 +23,7 @@ import { TokenBucketService } from './app-services/tokenBucketRateLimitter';
         name: 'MICROSERVICE_TWO',
         transport: Transport.REDIS,
         options: {
-          host: 'localhost',
+          host: process.env.REDIS_HOST,
           port: 6379,
         }
       },
